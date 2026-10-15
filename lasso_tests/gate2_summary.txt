@@ -1,0 +1,46 @@
+complete prompts: 80 of 80
+
+group                                 n           base    router_top1       sim_top2      lasso_set lasso_weighted     oracle_set   sim_top2_avg      lasso_avg     oracle_avg
+all                                  80          32.5%           7.5%           8.8%          12.5%           6.2%          12.5%          11.2%          13.8%          17.5%
+mixed                                60          40.0%           6.7%          11.7%          13.3%           5.0%          11.7%          15.0%          15.0%          18.3%
+single                               20          10.0%          10.0%           0.0%          10.0%          10.0%          15.0%           0.0%          10.0%          15.0%
+  base+harder_math                   15           0.0%           0.0%           0.0%           0.0%           0.0%           0.0%           0.0%           0.0%           0.0%
+  code+harder_math                   15         100.0%          20.0%          13.3%           6.7%          20.0%           0.0%          53.3%          53.3%          66.7%
+  harder_math                        10           0.0%           0.0%           0.0%           0.0%           0.0%           0.0%           0.0%           0.0%           0.0%
+  harder_math+not_enough_info        15          53.3%           0.0%           0.0%           0.0%           0.0%           0.0%           0.0%           0.0%           0.0%
+  harder_math+sql                    15           6.7%           6.7%          33.3%          46.7%           0.0%          46.7%           6.7%           6.7%           6.7%
+  math                               10          20.0%          20.0%           0.0%          20.0%          20.0%          30.0%           0.0%          20.0%          30.0%
+
+Paired differences (all prompts), mean and 95% bootstrap CI, percentage points:
+  lasso_set       - router_top1  [all   ]   +5.0  (-1.2, +12.5)
+  lasso_set       - router_top1  [mixed ]   +6.7  (-1.7, +15.0)
+  lasso_set       - router_top1  [single]   +0.0  (+0.0, +0.0)
+  lasso_weighted  - router_top1  [all   ]   -1.2  (-3.8, +0.0)
+  lasso_weighted  - router_top1  [mixed ]   -1.7  (-5.0, +0.0)
+  lasso_weighted  - router_top1  [single]   +0.0  (+0.0, +0.0)
+  lasso_set       - sim_top2     [all   ]   +3.8  (-1.2, +8.8)
+  lasso_set       - sim_top2     [mixed ]   +1.7  (-3.3, +6.7)
+  lasso_set       - sim_top2     [single]  +10.0  (+0.0, +25.0)
+  lasso_set       - base         [all   ]  -20.0  (-32.5, -8.8)
+  lasso_set       - base         [mixed ]  -26.7  (-41.7, -11.6)
+  lasso_set       - base         [single]   +0.0  (+0.0, +0.0)
+  oracle_set      - router_top1  [all   ]   +5.0  (-2.5, +12.5)
+  oracle_set      - router_top1  [mixed ]   +5.0  (-5.0, +15.0)
+  oracle_set      - router_top1  [single]   +5.0  (+0.0, +15.0)
+  router_top1     - base         [all   ]  -25.0  (-35.0, -16.2)
+  router_top1     - base         [mixed ]  -33.3  (-45.0, -21.7)
+  router_top1     - base         [single]   +0.0  (+0.0, +0.0)
+  sim_top2        - base         [all   ]  -23.8  (-36.2, -11.2)
+  sim_top2        - base         [mixed ]  -28.3  (-43.3, -13.3)
+  sim_top2        - base         [single]  -10.0  (-25.0, +0.0)
+
+Avg adapters used:
+  base            0.00
+  router_top1     0.85
+  sim_top2        1.81
+  lasso_set       1.65
+  lasso_weighted  1.65
+  oracle_set      1.56
+  sim_top2_avg    1.81
+  lasso_avg       1.65
+  oracle_avg      1.56

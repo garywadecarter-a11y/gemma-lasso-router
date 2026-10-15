@@ -1,0 +1,117 @@
+{"arm": "A_kl_baseline", "param": 64, "lr": 1, "seed": 0, "slots_added": 0, "old_acc": 0.996, "add_acc": 1.0, "new_seen": 0.148125, "new_heldout": 0.145, "base_old": 1.0, "base_add": 1.0}
+{"arm": "A_kl_baseline", "param": 64, "lr": 3, "seed": 0, "slots_added": 0, "old_acc": 0.914, "add_acc": 1.0, "new_seen": 0.4525, "new_heldout": 0.43, "base_old": 1.0, "base_add": 1.0}
+{"arm": "A_kl_baseline", "param": 64, "lr": 10, "seed": 0, "slots_added": 0, "old_acc": 0.66, "add_acc": 1.0, "new_seen": 0.73125, "new_heldout": 0.6925, "base_old": 1.0, "base_add": 1.0}
+{"arm": "oracle", "param": null, "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.990625, "new_heldout": 0.98, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 1], "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.693, "add_acc": 0.9727891156462585, "new_seen": 0.9925, "new_heldout": 0.985, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 4], "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.78, "add_acc": 0.9909297052154195, "new_seen": 0.9925, "new_heldout": 0.985, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 1], "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.813, "add_acc": 1.0, "new_seen": 0.9925, "new_heldout": 0.985, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 4], "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.838, "add_acc": 1.0, "new_seen": 0.9925, "new_heldout": 0.985, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 1], "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.952, "add_acc": 1.0, "new_seen": 0.9925, "new_heldout": 0.985, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 4], "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.954, "add_acc": 1.0, "new_seen": 0.9925, "new_heldout": 0.985, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 1], "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.998, "add_acc": 1.0, "new_seen": 0.9925, "new_heldout": 0.985, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 4], "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.998, "add_acc": 1.0, "new_seen": 0.9925, "new_heldout": 0.985, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 1], "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.9925, "new_heldout": 0.975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 4], "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.9925, "new_heldout": 0.975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.02, "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.995, "add_acc": 1.0, "new_seen": 0.986875, "new_heldout": 0.975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.05, "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.995, "add_acc": 1.0, "new_seen": 0.98375, "new_heldout": 0.97, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.1, "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.995, "add_acc": 1.0, "new_seen": 0.974375, "new_heldout": 0.96, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.2, "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.997, "add_acc": 1.0, "new_seen": 0.94875, "new_heldout": 0.915, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.3, "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 0.999, "add_acc": 1.0, "new_seen": 0.843125, "new_heldout": 0.815, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.5, "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.295, "new_heldout": 0.3, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.7, "lr": 30, "seed": 0, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.09, "new_heldout": 0.0825, "base_old": 1.0, "base_add": 1.0}
+{"arm": "oracle", "param": null, "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 1], "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.062, "add_acc": 0.5215419501133787, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 4], "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.158, "add_acc": 0.6167800453514739, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 1], "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.554, "add_acc": 0.9773242630385488, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 4], "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.563, "add_acc": 0.9773242630385488, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 1], "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.917, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 4], "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.917, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 1], "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.998, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 4], "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.998, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 1], "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 0.99, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 4], "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 0.99, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.02, "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.664, "add_acc": 0.9342403628117913, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.05, "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.693, "add_acc": 0.9546485260770975, "new_seen": 0.999375, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.1, "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.743, "add_acc": 0.9727891156462585, "new_seen": 0.998125, "new_heldout": 0.9975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.2, "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.837, "add_acc": 0.9977324263038548, "new_seen": 0.998125, "new_heldout": 0.9975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.3, "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.906, "add_acc": 1.0, "new_seen": 0.994375, "new_heldout": 0.9975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.5, "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 0.985, "add_acc": 1.0, "new_seen": 0.856875, "new_heldout": 0.85, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.7, "lr": 100, "seed": 0, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.475, "new_heldout": 0.4475, "base_old": 1.0, "base_add": 1.0}
+{"arm": "A_kl_baseline", "param": 64, "lr": 1, "seed": 2, "slots_added": 0, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.15625, "new_heldout": 0.14, "base_old": 1.0, "base_add": 1.0}
+{"arm": "A_kl_baseline", "param": 64, "lr": 3, "seed": 2, "slots_added": 0, "old_acc": 0.962, "add_acc": 1.0, "new_seen": 0.531875, "new_heldout": 0.49, "base_old": 1.0, "base_add": 1.0}
+{"arm": "A_kl_baseline", "param": 64, "lr": 10, "seed": 2, "slots_added": 0, "old_acc": 0.8, "add_acc": 1.0, "new_seen": 0.835, "new_heldout": 0.7975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "oracle", "param": null, "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.9925, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 1], "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 0.707, "add_acc": 0.9750566893424036, "new_seen": 0.99625, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 4], "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 0.797, "add_acc": 0.9886621315192744, "new_seen": 0.99625, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 1], "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 0.859, "add_acc": 1.0, "new_seen": 0.995, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 4], "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 0.875, "add_acc": 1.0, "new_seen": 0.995, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 1], "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 0.969, "add_acc": 1.0, "new_seen": 0.995, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 4], "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 0.97, "add_acc": 1.0, "new_seen": 0.995, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 1], "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.995, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 4], "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.995, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 1], "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.995, "new_heldout": 0.99, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 4], "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.995, "new_heldout": 0.99, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.02, "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 0.991, "add_acc": 1.0, "new_seen": 0.990625, "new_heldout": 0.985, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.05, "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 0.993, "add_acc": 1.0, "new_seen": 0.989375, "new_heldout": 0.9825, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.1, "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 0.996, "add_acc": 1.0, "new_seen": 0.983125, "new_heldout": 0.975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.2, "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 0.996, "add_acc": 1.0, "new_seen": 0.965625, "new_heldout": 0.9525, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.3, "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.90125, "new_heldout": 0.875, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.5, "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.36375, "new_heldout": 0.34, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.7, "lr": 30, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.109375, "new_heldout": 0.095, "base_old": 1.0, "base_add": 1.0}
+{"arm": "oracle", "param": null, "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 1], "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.076, "add_acc": 0.562358276643991, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 4], "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.184, "add_acc": 0.7256235827664399, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 1], "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.619, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 4], "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.634, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 1], "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.93, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 4], "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.932, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 1], "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 4], "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 1], "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 4], "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.02, "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.688, "add_acc": 0.963718820861678, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.05, "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.715, "add_acc": 0.9682539682539683, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.1, "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.759, "add_acc": 0.9931972789115646, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.2, "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.837, "add_acc": 0.9954648526077098, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.3, "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.884, "add_acc": 1.0, "new_seen": 0.999375, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.5, "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.978, "add_acc": 1.0, "new_seen": 0.9175, "new_heldout": 0.9075, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.7, "lr": 100, "seed": 2, "slots_added": 1600, "old_acc": 0.999, "add_acc": 1.0, "new_seen": 0.529375, "new_heldout": 0.4975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "A_kl_baseline", "param": 64, "lr": 1, "seed": 1, "slots_added": 0, "old_acc": 0.998, "add_acc": 1.0, "new_seen": 0.170625, "new_heldout": 0.1675, "base_old": 1.0, "base_add": 1.0}
+{"arm": "A_kl_baseline", "param": 64, "lr": 3, "seed": 1, "slots_added": 0, "old_acc": 0.951, "add_acc": 1.0, "new_seen": 0.520625, "new_heldout": 0.46, "base_old": 1.0, "base_add": 1.0}
+{"arm": "A_kl_baseline", "param": 64, "lr": 10, "seed": 1, "slots_added": 0, "old_acc": 0.728, "add_acc": 0.9886621315192744, "new_seen": 0.75875, "new_heldout": 0.715, "base_old": 1.0, "base_add": 1.0}
+{"arm": "oracle", "param": null, "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.9975, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 1], "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.702, "add_acc": 0.9931972789115646, "new_seen": 0.996875, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 4], "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.804, "add_acc": 0.9977324263038548, "new_seen": 0.996875, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 1], "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.821, "add_acc": 1.0, "new_seen": 0.996875, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 4], "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.85, "add_acc": 1.0, "new_seen": 0.996875, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 1], "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.948, "add_acc": 1.0, "new_seen": 0.996875, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 4], "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.95, "add_acc": 1.0, "new_seen": 0.996875, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 1], "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.998, "add_acc": 1.0, "new_seen": 0.996875, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 4], "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.998, "add_acc": 1.0, "new_seen": 0.996875, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 1], "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.996875, "new_heldout": 0.99, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 4], "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.996875, "new_heldout": 0.99, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.02, "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.99, "add_acc": 1.0, "new_seen": 0.996875, "new_heldout": 0.9825, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.05, "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.991, "add_acc": 1.0, "new_seen": 0.996875, "new_heldout": 0.985, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.1, "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.993, "add_acc": 1.0, "new_seen": 0.99625, "new_heldout": 0.9825, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.2, "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.996, "add_acc": 1.0, "new_seen": 0.979375, "new_heldout": 0.9575, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.3, "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 0.999, "add_acc": 1.0, "new_seen": 0.915625, "new_heldout": 0.88, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.5, "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.395, "new_heldout": 0.3725, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.7, "lr": 30, "seed": 1, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 0.129375, "new_heldout": 0.1325, "base_old": 1.0, "base_add": 1.0}
+{"arm": "oracle", "param": null, "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 1], "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.058, "add_acc": 0.655328798185941, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.5, 4], "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.141, "add_acc": 0.7755102040816326, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 1], "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.53, "add_acc": 0.9773242630385488, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.7, 4], "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.541, "add_acc": 0.9773242630385488, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 1], "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.897, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.8, 4], "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.898, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 1], "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.995, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.9, 4], "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.995, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 1.0, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 1], "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "nearest", "param": [0.95, 4], "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 1.0, "add_acc": 1.0, "new_seen": 1.0, "new_heldout": 0.995, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.02, "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.636, "add_acc": 0.9433106575963719, "new_seen": 0.999375, "new_heldout": 0.9975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.05, "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.671, "add_acc": 0.9501133786848073, "new_seen": 0.999375, "new_heldout": 0.9975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.1, "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.715, "add_acc": 0.9705215419501134, "new_seen": 0.999375, "new_heldout": 0.9975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.2, "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.806, "add_acc": 0.9977324263038548, "new_seen": 0.996875, "new_heldout": 0.9975, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.3, "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.876, "add_acc": 1.0, "new_seen": 0.994375, "new_heldout": 0.99, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.5, "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.97, "add_acc": 1.0, "new_seen": 0.893125, "new_heldout": 0.8675, "base_old": 1.0, "base_add": 1.0}
+{"arm": "lasso", "param": 0.7, "lr": 100, "seed": 1, "slots_added": 1600, "old_acc": 0.999, "add_acc": 1.0, "new_seen": 0.55625, "new_heldout": 0.5475, "base_old": 1.0, "base_add": 1.0}

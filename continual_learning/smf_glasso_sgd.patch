@@ -1,0 +1,106 @@
+diff --git a/smf_rebuild/sparse_memory.py b/smf_rebuild/sparse_memory.py
+index e851859..04a8a87 100644
+--- a/smf_rebuild/sparse_memory.py
++++ b/smf_rebuild/sparse_memory.py
+@@ -38,6 +38,7 @@ class SparseSelectionConfig:
+     top_t: int = 256
+     scoring: str = "kl"
+     background_max_batches: int = 200
++    lam: float = 1.0  # glasso: penalty strength (relative to mean accessed-row grad norm)
+ 
+ 
+ class SparseMemoryController:
+@@ -65,6 +66,7 @@ class SparseMemoryController:
+             for idx in self.layers
+         }
+         self._hook_handles = []
++        self.last_rows_updated = {idx: 0 for idx in self.layers}
+ 
+     def reset_batch_counts(self) -> None:
+         for logger in self.loggers.values():
+@@ -112,7 +114,22 @@ class SparseMemoryController:
+     def _make_grad_hook(self, layer_idx: int):
+         def hook(grad):
+             mask = self.slot_train_masks[layer_idx].to(grad.device)
+-            return grad * mask.unsqueeze(-1).to(grad.dtype)
++            if self.config.scoring != "glasso":
++                return grad * mask.unsqueeze(-1).to(grad.dtype)
++            # Weighted group lasso (closed form, one group per value row):
++            #   u_i = g_i * max(0, 1 - lam * w_i * gbar / ||g_i||)
++            # w_i  = background usage of slot i, normalised to mean 1 (interference cost)
++            # gbar = mean grad norm over rows accessed in this batch (makes lam scale-free)
++            g32 = grad.float()
++            gn = g32.norm(dim=-1)
++            if not bool(mask.any()):
++                return grad * 0
++            gbar = gn[mask].mean().clamp_min(1e-12)
++            bg = self.bg_access_counts[layer_idx].to(grad.device).float() + 1.0
++            w = bg / bg.mean()
++            mult = (1.0 - self.config.lam * w * gbar / gn.clamp_min(1e-12)).clamp_min(0.0) * mask.float()
++            self.last_rows_updated[layer_idx] = int((mult > 0).sum().item())
++            return (g32 * mult.unsqueeze(-1)).to(grad.dtype)
+ 
+         return hook
+ 
+@@ -125,6 +142,10 @@ class SparseMemoryController:
+             if total == 0:
+                 continue
+ 
++            if self.config.scoring == "glasso":
++                # every accessed row is a candidate; the gradient hook decides
++                mask.copy_(counts > 0)
++                continue
+             if self.config.scoring == "tfidf":
+                 tf = counts.float() / total.float()
+                 df = self.bg_df[idx].float()
+@@ -137,7 +158,7 @@ class SparseMemoryController:
+                 eps = 1e-8
+                 score = p_batch * torch.log((p_batch + eps) / (p_bg + eps))
+             else:
+-                raise ValueError("--sparse-scoring must be tfidf or kl")
++                raise ValueError("--sparse-scoring must be tfidf, kl or glasso")
+ 
+             score = score.masked_fill(counts == 0, float("-inf"))
+             active = int((counts > 0).sum().item())
+diff --git a/smf_rebuild/train_sparse.py b/smf_rebuild/train_sparse.py
+index 4cf4066..b65087d 100644
+--- a/smf_rebuild/train_sparse.py
++++ b/smf_rebuild/train_sparse.py
+@@ -53,7 +53,10 @@ def parse_args():
+     parser.add_argument("--background-max-batches", type=int, default=1000)
+     parser.add_argument("--background-batch-size", type=int, default=1)
+     parser.add_argument("--sparse-top-t", type=int, default=256)
+-    parser.add_argument("--sparse-scoring", default="kl", choices=["kl", "tfidf"])
++    parser.add_argument("--sparse-scoring", default="kl", choices=["kl", "tfidf", "glasso"])
++    parser.add_argument("--sparse-lam", type=float, default=1.0, help="glasso penalty strength")
++    parser.add_argument("--optim", default="adamw", choices=["adamw", "sgd"],
++                        help="sgd avoids Adam momentum moving rows after they are masked out")
+     parser.add_argument("--num-proc", type=int, default=4)
+ 
+     parser.add_argument("--per-device-train-batch-size", type=int, default=4)
+@@ -94,7 +97,7 @@ def main():
+     cast_trainable_params(model, dtype_from_name(args.trainable_param_dtype))
+     trainable, total = count_trainable_params(model)
+     print(f"Trainable parameters: {trainable:,} / {total:,} ({100 * trainable / total:.2f}%)")
+-    print(f"Sparse selector: {args.sparse_scoring}, top_t={args.sparse_top_t}")
++    print(f"Sparse selector: {args.sparse_scoring}, top_t={args.sparse_top_t}, lam={args.sparse_lam}, optim={args.optim}")
+ 
+     train_dataset = load_lm_dataset(
+         tokenizer,
+@@ -147,6 +150,7 @@ def main():
+             top_t=args.sparse_top_t,
+             scoring=args.sparse_scoring,
+             background_max_batches=args.background_max_batches,
++            lam=args.sparse_lam,
+         ),
+         device=device,
+     )
+@@ -179,7 +183,7 @@ def main():
+         save_total_limit=2,
+         bf16=use_bf16,
+         fp16=use_fp16,
+-        optim="adamw_torch_fused" if torch.cuda.is_available() else "adamw_torch",
++        optim=("sgd" if args.optim == "sgd" else ("adamw_torch_fused" if torch.cuda.is_available() else "adamw_torch")),
+         max_grad_norm=1.0,
+         dataloader_num_workers=args.dataloader_num_workers,
+         report_to=args.report_to.split(",") if args.report_to else [],

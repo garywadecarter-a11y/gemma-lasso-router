@@ -1,0 +1,123 @@
+TEST 1 — knowledge spread over two partial pieces (3 seeds)
+
+ write lr=1
+  oracle_one   None   seen 0.095±0.014  held-out 0.091±0.014  retention 1.000±0.000  n=3
+  oracle_both  None   seen 0.233±0.017  held-out 0.227±0.013  retention 1.000±0.000  n=3
+  nearest1     0.6    seen 0.043±0.007  held-out 0.043±0.007  retention 1.000±0.000  n=3
+  nearest1     0.7    seen 0.043±0.007  held-out 0.043±0.007  retention 1.000±0.000  n=3
+  nearest1     0.8    seen 0.043±0.007  held-out 0.043±0.007  retention 1.000±0.000  n=3
+  nearest1     0.9    seen 0.043±0.007  held-out 0.043±0.007  retention 1.000±0.000  n=3
+  nearest_sum  0.6    seen 0.163±0.011  held-out 0.168±0.015  retention 0.981±0.002  n=3
+  nearest_sum  0.7    seen 0.214±0.013  held-out 0.211±0.010  retention 0.998±0.001  n=3
+  nearest_sum  0.8    seen 0.232±0.016  held-out 0.224±0.014  retention 1.000±0.000  n=3
+  nearest_sum  0.9    seen 0.236±0.019  held-out 0.227±0.014  retention 1.000±0.000  n=3
+  lasso        0.02   seen 0.039±0.007  held-out 0.038±0.006  retention 1.000±0.000  n=3
+  lasso        0.05   seen 0.038±0.007  held-out 0.038±0.006  retention 1.000±0.000  n=3
+  lasso        0.1    seen 0.037±0.006  held-out 0.036±0.006  retention 1.000±0.000  n=3
+  lasso        0.2    seen 0.033±0.006  held-out 0.034±0.008  retention 1.000±0.000  n=3
+  lasso        0.3    seen 0.028±0.005  held-out 0.029±0.007  retention 1.000±0.000  n=3
+
+ write lr=3
+  oracle_one   None   seen 0.405±0.031  held-out 0.399±0.031  retention 1.000±0.000  n=3
+  oracle_both  None   seen 0.708±0.025  held-out 0.706±0.022  retention 1.000±0.000  n=3
+  nearest1     0.6    seen 0.163±0.021  held-out 0.165±0.017  retention 1.000±0.000  n=3
+  nearest1     0.7    seen 0.163±0.021  held-out 0.165±0.017  retention 1.000±0.000  n=3
+  nearest1     0.8    seen 0.163±0.021  held-out 0.165±0.017  retention 1.000±0.000  n=3
+  nearest1     0.9    seen 0.163±0.021  held-out 0.165±0.017  retention 1.000±0.000  n=3
+  nearest_sum  0.6    seen 0.308±0.019  held-out 0.307±0.028  retention 0.746±0.029  n=3
+  nearest_sum  0.7    seen 0.571±0.023  held-out 0.575±0.039  retention 0.918±0.012  n=3
+  nearest_sum  0.8    seen 0.687±0.027  held-out 0.682±0.025  retention 0.987±0.004  n=3
+  nearest_sum  0.9    seen 0.711±0.029  held-out 0.706±0.034  retention 1.000±0.000  n=3
+  lasso        0.02   seen 0.150±0.021  held-out 0.147±0.017  retention 1.000±0.000  n=3
+  lasso        0.05   seen 0.147±0.022  held-out 0.142±0.019  retention 1.000±0.000  n=3
+  lasso        0.1    seen 0.139±0.021  held-out 0.134±0.016  retention 1.000±0.000  n=3
+  lasso        0.2    seen 0.119±0.018  held-out 0.113±0.019  retention 1.000±0.000  n=3
+  lasso        0.3    seen 0.099±0.015  held-out 0.095±0.019  retention 1.000±0.000  n=3
+
+ write lr=10
+  oracle_one   None   seen 0.849±0.014  held-out 0.845±0.012  retention 1.000±0.000  n=3
+  oracle_both  None   seen 0.887±0.011  held-out 0.892±0.009  retention 1.000±0.000  n=3
+  nearest1     0.6    seen 0.634±0.035  held-out 0.633±0.042  retention 0.895±0.018  n=3
+  nearest1     0.7    seen 0.634±0.035  held-out 0.633±0.042  retention 0.939±0.011  n=3
+  nearest1     0.8    seen 0.634±0.035  held-out 0.633±0.042  retention 0.984±0.003  n=3
+  nearest1     0.9    seen 0.634±0.035  held-out 0.633±0.042  retention 1.000±0.000  n=3
+  nearest_sum  0.6    seen 0.320±0.027  held-out 0.318±0.034  retention 0.499±0.057  n=3
+  nearest_sum  0.7    seen 0.660±0.023  held-out 0.668±0.036  retention 0.803±0.022  n=3
+  nearest_sum  0.8    seen 0.861±0.009  held-out 0.866±0.013  retention 0.965±0.005  n=3
+  nearest_sum  0.9    seen 0.900±0.005  held-out 0.901±0.008  retention 0.999±0.001  n=3
+  lasso        0.02   seen 0.616±0.038  held-out 0.604±0.035  retention 0.994±0.002  n=3
+  lasso        0.05   seen 0.611±0.039  held-out 0.602±0.041  retention 0.995±0.002  n=3
+  lasso        0.1    seen 0.589±0.042  held-out 0.583±0.041  retention 0.996±0.001  n=3
+  lasso        0.2    seen 0.527±0.042  held-out 0.520±0.041  retention 0.997±0.000  n=3
+  lasso        0.3    seen 0.463±0.036  held-out 0.452±0.046  retention 0.998±0.000  n=3
+
+ Best per switch (retention >= 0.99), by write lr:
+  lr=1    oracle_one   param=None   seen 0.095±0.014  held-out 0.091±0.014
+  lr=1    oracle_both  param=None   seen 0.233±0.017  held-out 0.227±0.013
+  lr=1    nearest1     param=0.6    seen 0.043±0.007  held-out 0.043±0.007
+  lr=1    nearest_sum  param=0.9    seen 0.236±0.019  held-out 0.227±0.014
+  lr=1    lasso        param=0.02   seen 0.039±0.007  held-out 0.038±0.006
+  lr=3    oracle_one   param=None   seen 0.405±0.031  held-out 0.399±0.031
+  lr=3    oracle_both  param=None   seen 0.708±0.025  held-out 0.706±0.022
+  lr=3    nearest1     param=0.6    seen 0.163±0.021  held-out 0.165±0.017
+  lr=3    nearest_sum  param=0.9    seen 0.711±0.029  held-out 0.706±0.034
+  lr=3    lasso        param=0.02   seen 0.150±0.021  held-out 0.147±0.017
+  lr=10   oracle_one   param=None   seen 0.849±0.014  held-out 0.845±0.012
+  lr=10   oracle_both  param=None   seen 0.887±0.011  held-out 0.892±0.009
+  lr=10   nearest1     param=0.9    seen 0.634±0.035  held-out 0.633±0.042
+  lr=10   nearest_sum  param=0.9    seen 0.900±0.005  held-out 0.901±0.008
+  lr=10   lasso        param=0.02   seen 0.616±0.038  held-out 0.604±0.035
+
+
+TEST 2 — indirect use: taught only CITY, asked COUNTRY via think-out-loud (3 seeds)
+  before: old people composed 0.990, new people country 0.155 (chance 0.10)
+  method   lr     switch                             new_city            new_country   new_country_and_city               old_city   old_country_composed                    add
+  full_ft  0.0001 null                            0.077±0.004            0.165±0.019            0.088±0.006            0.470±0.031            0.918±0.032            0.974±0.019
+  full_ft  0.0003 null                            0.057±0.016            0.195±0.016            0.112±0.021            0.034±0.018            0.268±0.068            0.153±0.118
+  growth   30     ["lasso", 0.02]                 0.993±0.003            0.913±0.013            0.897±0.019            1.000±0.000            0.952±0.022            1.000±0.000
+  growth   30     ["lasso", 0.05]                 0.992±0.002            0.907±0.015            0.892±0.023            1.000±0.000            0.960±0.018            1.000±0.000
+  growth   30     ["lasso", 0.1]                  0.988±0.002            0.883±0.019            0.868±0.023            1.000±0.000            0.966±0.011            1.000±0.000
+  growth   30     ["lasso", 0.2]                  0.955±0.004            0.785±0.018            0.762±0.021            1.000±0.000            0.970±0.010            1.000±0.000
+  growth   30     ["lasso", 0.3]                  0.823±0.039            0.595±0.018            0.552±0.006            1.000±0.000            0.980±0.005            1.000±0.000
+  growth   30     ["nearest", [0.5, 1]]            0.993±0.002            0.978±0.002            0.977±0.005            0.802±0.015            0.613±0.050            0.989±0.008
+  growth   30     ["nearest", [0.6, 1]]            0.993±0.002            0.978±0.002            0.977±0.005            0.804±0.016            0.623±0.050            0.997±0.004
+  growth   30     ["nearest", [0.7, 1]]            0.993±0.002            0.978±0.002            0.977±0.005            0.844±0.016            0.732±0.059            1.000±0.000
+  growth   30     ["nearest", [0.8, 1]]            0.993±0.002            0.978±0.002            0.977±0.005            0.953±0.015            0.903±0.041            1.000±0.000
+  growth   30     ["nearest", [0.9, 1]]            0.993±0.002            0.973±0.005            0.972±0.006            0.998±0.002            0.991±0.004            1.000±0.000
+  growth   100    ["lasso", 0.02]                 0.995±0.002            0.995±0.004            0.993±0.005            0.701±0.030            0.557±0.054            0.988±0.003
+  growth   100    ["lasso", 0.05]                 0.995±0.002            0.995±0.004            0.995±0.004            0.733±0.030            0.591±0.066            0.992±0.002
+  growth   100    ["lasso", 0.1]                  0.996±0.002            0.988±0.010            0.988±0.010            0.780±0.037            0.644±0.064            0.998±0.002
+  growth   100    ["lasso", 0.2]                  0.993±0.002            0.983±0.013            0.982±0.012            0.856±0.040            0.723±0.062            1.000±0.000
+  growth   100    ["lasso", 0.3]                  0.982±0.008            0.967±0.014            0.965±0.015            0.903±0.017            0.790±0.057            1.000±0.000
+  growth   100    ["nearest", [0.5, 1]]            0.995±0.002            0.998±0.002            0.998±0.002            0.058±0.010            0.108±0.023            0.742±0.136
+  growth   100    ["nearest", [0.6, 1]]            0.995±0.002            0.998±0.002            0.998±0.002            0.092±0.018            0.143±0.033            0.960±0.044
+  growth   100    ["nearest", [0.7, 1]]            0.995±0.002            0.998±0.002            0.998±0.002            0.391±0.067            0.430±0.088            0.998±0.002
+  growth   100    ["nearest", [0.8, 1]]            0.995±0.002            0.998±0.002            0.998±0.002            0.830±0.058            0.838±0.063            1.000±0.000
+  growth   100    ["nearest", [0.9, 1]]            0.995±0.002            0.993±0.005            0.993±0.005            0.993±0.003            0.990±0.003            1.000±0.000
+  kl       3      null                            0.449±0.018            0.305±0.021            0.223±0.019            0.967±0.008            0.917±0.017            1.000±0.000
+  kl       10     null                            0.768±0.023            0.610±0.039            0.552±0.033            0.796±0.028            0.696±0.006            0.998±0.003
+  kl       30     null                            0.785±0.013            0.690±0.032            0.650±0.037            0.418±0.024            0.378±0.029            0.942±0.034
+
+
+TEST 3 — bounded growth (1 slot per fact; 400 facts)
+ Best non-oracle switch per (strategy, budget, lr) subject to retention >= 0.99; overall new-fact accuracy = 0.8*seen + 0.2*held-out
+  budget 400 (100% of facts)  evict        oracle switch          lr=30   new 0.999±0.001  n=3
+  budget 400 (100% of facts)  evict        nearest1 0.9           lr=30   new 0.999±0.002  n=3
+  budget 200 (50% of facts)  evict        oracle switch          lr=30   new 0.503±0.002  n=3
+  budget 200 (50% of facts)  evict        nearest1 0.9           lr=30   new 0.510±0.003  n=3
+  budget 200 (50% of facts)  merge        oracle switch          lr=30   new 0.516±0.006  n=3
+  budget 200 (50% of facts)  merge        nearest1 0.9           lr=30   new 0.403±0.013  n=3
+  budget 200 (50% of facts)  lasso_reuse  oracle switch          lr=30   new 0.714±0.007  n=3
+  budget 200 (50% of facts)  lasso_reuse  nearest1 0.9           lr=30   new 0.383±0.011  n=3
+  budget 100 (25% of facts)  evict        oracle switch          lr=30   new 0.255±0.002  n=3
+  budget 100 (25% of facts)  evict        nearest1 0.8           lr=30   new 0.263±0.003  n=3
+  budget 100 (25% of facts)  merge        oracle switch          lr=30   new 0.275±0.004  n=3
+  budget 100 (25% of facts)  merge        nearest1 0.8           lr=30   new 0.257±0.010  n=3
+  budget 100 (25% of facts)  lasso_reuse  oracle switch          lr=30   new 0.427±0.010  n=3
+  budget 100 (25% of facts)  lasso_reuse  nearest1 0.8           lr=30   new 0.109±0.004  n=3
+  budget  50 (12% of facts)  evict        oracle switch          lr=30   new 0.132±0.002  n=3
+  budget  50 (12% of facts)  evict        nearest1 0.8           lr=30   new 0.139±0.003  n=3
+  budget  50 (12% of facts)  merge        oracle switch          lr=30   new 0.152±0.006  n=3
+  budget  50 (12% of facts)  merge        nearest1 0.8           lr=100  new 0.131±0.001  n=3
+  budget  50 (12% of facts)  lasso_reuse  oracle switch          lr=30   new 0.215±0.024  n=3
+  budget  50 (12% of facts)  lasso_reuse  nearest1 0.8           lr=30   new 0.026±0.004  n=3

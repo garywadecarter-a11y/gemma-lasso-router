@@ -1,0 +1,113 @@
+Best retention achievable while learning at least X of the new facts (mean over seeds):
+
+method       new>=0.2             new>=0.4             new>=0.6             new>=0.8             new>=0.9          
+full_ft        -                     -                     -                     -                     -                
+mem_dense    0.964±0.018 (n0.49)    0.964±0.018 (n0.49)    0.851±0.039 (n0.76)      -                     -                
+tfidf        0.982±0.003 (n0.43)    0.982±0.003 (n0.43)    0.882±0.015 (n0.72)      -                     -                
+kl           0.993±0.001 (n0.30)    0.971±0.010 (n0.50)    0.928±0.006 (n0.61)      -                     -                
+grad         0.964±0.018 (n0.48)    0.964±0.018 (n0.48)    0.853±0.036 (n0.76)      -                     -                
+ratio        0.967±0.016 (n0.49)    0.967±0.016 (n0.49)    0.863±0.028 (n0.77)      -                     -                
+glasso       0.982±0.006 (n0.43)    0.982±0.006 (n0.43)    0.890±0.027 (n0.73)      -                     -                
+
+Best new-fact learning while keeping retention at least Y:
+
+method       ret>=0.99              ret>=0.97              ret>=0.95              ret>=0.90           
+full_ft      0.035±0.006 [lr=1e-05]   0.096±0.008 [lr=3e-05]   0.096±0.008 [lr=3e-05]   0.096±0.008 [lr=3e-05]
+mem_dense    0.157±0.013 [lr=1]   0.157±0.013 [lr=1]   0.485±0.047 [lr=3]   0.485±0.047 [lr=3]
+tfidf        0.193±0.033 [lr=3,t=16]   0.433±0.042 [lr=3,t=64]   0.484±0.048 [lr=3,t=256]   0.484±0.048 [lr=3,t=256]
+kl           0.305±0.048 [lr=3,t=16]   0.499±0.039 [lr=3,t=64]   0.499±0.039 [lr=3,t=64]   0.607±0.073 [lr=10,t=16]
+grad         0.157±0.013 [lr=1,t=64]   0.157±0.013 [lr=1,t=64]   0.485±0.047 [lr=3,t=64]   0.485±0.047 [lr=3,t=64]
+ratio        0.159±0.011 [lr=1,t=16]   0.159±0.011 [lr=1,t=16]   0.488±0.042 [lr=3,t=16]   0.488±0.042 [lr=3,t=16]
+glasso       0.158±0.011 [lr=1,lam=0.25]   0.487±0.039 [lr=3,lam=0.5]   0.489±0.044 [lr=3,lam=0.25]   0.489±0.044 [lr=3,lam=0.25]
+
+All configs:
+  full_ft    lr=0.0001                new 0.139±0.028  ret 0.562±0.061  seeds 3
+  full_ft    lr=0.0003                new 0.107±0.021  ret 0.128±0.019  seeds 3
+  full_ft    lr=3e-05                 new 0.096±0.008  ret 0.989±0.013  seeds 3
+  full_ft    lr=1e-05                 new 0.035±0.006  ret 1.000±0.000  seeds 3
+  mem_dense  lr=30                    new 0.773±0.063  ret 0.646±0.061  seeds 3
+  mem_dense  lr=10                    new 0.761±0.059  ret 0.851±0.039  seeds 3
+  mem_dense  lr=3                     new 0.485±0.047  ret 0.964±0.018  seeds 3
+  mem_dense  lr=1                     new 0.157±0.013  ret 0.997±0.004  seeds 3
+  mem_dense  lr=0.3                   new 0.034±0.006  ret 1.000±0.000  seeds 3
+  tfidf      lr=30,t=256              new 0.773±0.062  ret 0.647±0.058  seeds 3
+  tfidf      lr=10,t=256              new 0.761±0.062  ret 0.851±0.040  seeds 3
+  tfidf      lr=30,t=64               new 0.741±0.060  ret 0.705±0.042  seeds 3
+  tfidf      lr=10,t=64               new 0.717±0.052  ret 0.882±0.015  seeds 3
+  tfidf      lr=30,t=16               new 0.585±0.083  ret 0.859±0.002  seeds 3
+  tfidf      lr=3,t=256               new 0.484±0.048  ret 0.964±0.019  seeds 3
+  tfidf      lr=10,t=16               new 0.449±0.070  ret 0.967±0.003  seeds 3
+  tfidf      lr=3,t=64                new 0.433±0.042  ret 0.982±0.003  seeds 3
+  tfidf      lr=3,t=16                new 0.193±0.033  ret 0.997±0.001  seeds 3
+  tfidf      lr=1,t=256               new 0.157±0.014  ret 0.998±0.003  seeds 3
+  tfidf      lr=1,t=64                new 0.130±0.008  ret 1.000±0.000  seeds 3
+  tfidf      lr=1,t=16                new 0.049±0.011  ret 1.000±0.000  seeds 3
+  kl         lr=10,t=64               new 0.776±0.050  ret 0.863±0.029  seeds 3
+  kl         lr=30,t=64               new 0.775±0.055  ret 0.662±0.053  seeds 3
+  kl         lr=30,t=256              new 0.773±0.063  ret 0.648±0.054  seeds 3
+  kl         lr=10,t=256              new 0.762±0.060  ret 0.851±0.038  seeds 3
+  kl         lr=30,t=16               new 0.668±0.062  ret 0.752±0.018  seeds 3
+  kl         lr=10,t=16               new 0.607±0.073  ret 0.928±0.006  seeds 3
+  kl         lr=3,t=64                new 0.499±0.039  ret 0.971±0.010  seeds 3
+  kl         lr=3,t=256               new 0.485±0.048  ret 0.964±0.018  seeds 3
+  kl         lr=3,t=16                new 0.305±0.048  ret 0.993±0.001  seeds 3
+  kl         lr=1,t=64                new 0.159±0.011  ret 0.999±0.001  seeds 3
+  kl         lr=1,t=256               new 0.157±0.014  ret 0.997±0.004  seeds 3
+  kl         lr=1,t=16                new 0.076±0.014  ret 1.000±0.000  seeds 3
+  grad       lr=30,t=64               new 0.773±0.063  ret 0.646±0.061  seeds 3
+  grad       lr=30,t=256              new 0.773±0.063  ret 0.646±0.061  seeds 3
+  grad       lr=30,t=16               new 0.771±0.063  ret 0.650±0.056  seeds 3
+  grad       lr=10,t=16               new 0.761±0.060  ret 0.853±0.036  seeds 3
+  grad       lr=10,t=64               new 0.761±0.059  ret 0.851±0.039  seeds 3
+  grad       lr=10,t=256              new 0.761±0.059  ret 0.851±0.039  seeds 3
+  grad       lr=3,t=64                new 0.485±0.047  ret 0.964±0.018  seeds 3
+  grad       lr=3,t=256               new 0.485±0.047  ret 0.964±0.018  seeds 3
+  grad       lr=3,t=16                new 0.484±0.050  ret 0.964±0.018  seeds 3
+  grad       lr=1,t=64                new 0.157±0.013  ret 0.997±0.004  seeds 3
+  grad       lr=1,t=256               new 0.157±0.013  ret 0.997±0.004  seeds 3
+  grad       lr=1,t=16                new 0.157±0.014  ret 0.997±0.004  seeds 3
+  ratio      lr=30,t=16               new 0.775±0.055  ret 0.660±0.052  seeds 3
+  ratio      lr=30,t=64               new 0.773±0.063  ret 0.646±0.061  seeds 3
+  ratio      lr=30,t=256              new 0.773±0.063  ret 0.646±0.061  seeds 3
+  ratio      lr=10,t=16               new 0.769±0.047  ret 0.863±0.028  seeds 3
+  ratio      lr=10,t=64               new 0.762±0.060  ret 0.852±0.039  seeds 3
+  ratio      lr=10,t=256              new 0.761±0.059  ret 0.851±0.039  seeds 3
+  ratio      lr=3,t=16                new 0.488±0.042  ret 0.967±0.016  seeds 3
+  ratio      lr=3,t=64                new 0.485±0.047  ret 0.964±0.018  seeds 3
+  ratio      lr=3,t=256               new 0.485±0.047  ret 0.964±0.018  seeds 3
+  ratio      lr=1,t=16                new 0.159±0.011  ret 0.998±0.001  seeds 3
+  ratio      lr=1,t=64                new 0.157±0.013  ret 0.997±0.004  seeds 3
+  ratio      lr=1,t=256               new 0.157±0.013  ret 0.997±0.004  seeds 3
+  glasso     lr=30,lam=0.5            new 0.775±0.056  ret 0.669±0.043  seeds 3
+  glasso     lr=10,lam=0.25           new 0.773±0.049  ret 0.864±0.028  seeds 3
+  glasso     lr=30,lam=1              new 0.772±0.055  ret 0.683±0.036  seeds 3
+  glasso     lr=10,lam=0.5            new 0.771±0.048  ret 0.867±0.030  seeds 3
+  glasso     lr=30,lam=2              new 0.769±0.057  ret 0.696±0.031  seeds 3
+  glasso     lr=30,lam=0.25           new 0.769±0.061  ret 0.657±0.051  seeds 3
+  glasso     lr=10,lam=1              new 0.768±0.048  ret 0.871±0.029  seeds 3
+  glasso     lr=30,lam=4              new 0.760±0.052  ret 0.725±0.029  seeds 3
+  glasso     lr=10,lam=2              new 0.758±0.046  ret 0.875±0.031  seeds 3
+  glasso     lr=10,lam=4              new 0.731±0.045  ret 0.890±0.027  seeds 3
+  glasso     lr=3,lam=0.25            new 0.489±0.044  ret 0.969±0.014  seeds 3
+  glasso     lr=3,lam=0.5             new 0.487±0.039  ret 0.972±0.010  seeds 3
+  glasso     lr=3,lam=1               new 0.479±0.039  ret 0.974±0.010  seeds 3
+  glasso     lr=3,lam=2               new 0.459±0.038  ret 0.977±0.008  seeds 3
+  glasso     lr=3,lam=4               new 0.426±0.032  ret 0.982±0.006  seeds 3
+  glasso     lr=1,lam=0.25            new 0.158±0.011  ret 0.999±0.001  seeds 3
+  glasso     lr=1,lam=0.5             new 0.154±0.013  ret 0.999±0.001  seeds 3
+  glasso     lr=1,lam=1               new 0.151±0.012  ret 0.999±0.001  seeds 3
+  glasso     lr=1,lam=2               new 0.142±0.012  ret 0.999±0.000  seeds 3
+  glasso     lr=1,lam=4               new 0.128±0.010  ret 1.000±0.000  seeds 3
+
+Area under learning-vs-retention frontier (retention above 0.80), per seed; higher is better:
+  full_ft    0.0163 0.0183 0.0216   mean 0.0187 ± 0.0022
+  mem_dense  0.0667 0.1061 0.1283   mean 0.1004 ± 0.0255
+  tfidf      0.0939 0.1124 0.1330   mean 0.1131 ± 0.0160
+  kl         0.0967 0.1142 0.1396   mean 0.1168 ± 0.0176
+  grad       0.0677 0.1070 0.1289   mean 0.1012 ± 0.0253
+  ratio      0.0790 0.1075 0.1300   mean 0.1055 ± 0.0208
+  glasso     0.0964 0.1148 0.1400   mean 0.1171 ± 0.0179
+  glasso - kl: per-seed -0.0003 +0.0006 +0.0004  mean +0.0002
+  glasso - tfidf: per-seed +0.0025 +0.0024 +0.0069  mean +0.0040
+  kl - tfidf: per-seed +0.0029 +0.0018 +0.0065  mean +0.0037
+  ratio - grad: per-seed +0.0114 +0.0006 +0.0010  mean +0.0043

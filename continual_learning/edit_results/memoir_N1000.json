@@ -1,0 +1,49 @@
+{
+ "args": {
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "data": "C:\\Users\\Wade Carter\\gemma-lasso-router\\continual_learning\\zsre_mend_eval.json",
+  "n_edits": 1000,
+  "method": "memoir",
+  "layer": null,
+  "budget": 500,
+  "top_k_ratio": 0.2857142857142857,
+  "taus": null,
+  "alpha": 0.05,
+  "lr": 1.0,
+  "n_iter": 30,
+  "dtype": "fp32",
+  "seed": 0,
+  "eval_limit": null,
+  "out": "C:\\Users\\Wade Carter\\gemma-lasso-router\\continual_learning\\edit_results\\memoir_N1000.json"
+ },
+ "layer": 20,
+ "edit_seconds": 2906.2999045848846,
+ "by_tau": {
+  "0.3": {
+   "reliability": 0.6856746031746032,
+   "generalization": 0.5890531746031746,
+   "locality": 0.29288235188969347,
+   "average": 0.522536709889157
+  },
+  "0.4": {
+   "reliability": 0.6856746031746032,
+   "generalization": 0.5890531746031746,
+   "locality": 0.4083720096721522,
+   "average": 0.56103326248331
+  },
+  "0.5": {
+   "reliability": 0.6856746031746032,
+   "generalization": 0.5885531746031746,
+   "locality": 1.0,
+   "average": 0.758075925925926
+  },
+  "0.6": {
+   "reliability": 0.6856746031746032,
+   "generalization": 0.568047619047619,
+   "locality": 1.0,
+   "average": 0.7512407407407408
+  }
+ },
+ "memory_floats": 4358144,
+ "mask_bits": 4864000
+}
